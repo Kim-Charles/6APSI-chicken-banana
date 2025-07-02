@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/009/447/773/non_2x/autumn-rural-landscape-in-evening-light-with-sunset-yellow-orange-sky-background-cartoon-fall-season-at-countryside-with-forest-tree-and-grass-field-with-sunrise-backdrop-natural-banner-vector.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 250px;
+  text-align: center;
+}
+
+.landing-h1 {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.landing-h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.start-button,
+.player-button,
+.restart-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: rgb(250, 211, 126);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.start-button:hover,
+.player-button:hover,
+.restart-button:hover {
+  background-color: rgb(255, 174, 0);
+  transform: scale(1.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(6, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  background-image: url("https://cdn.creazilla.com/cliparts/1999261/brown-crate-clipart-lg.png");
+  cursor: pointer;
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hidden-tile {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.choice-container {
+  width: 450px;
+  margin: auto;
+  padding-bottom: 1px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.choosen-container {
+  width: 450px;
+  margin: 20px auto;
+  padding-bottom: 1px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.warning-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgb(173, 2, 2);
+  color: rgb(221, 221, 221);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  z-index: 1;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.popup-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
