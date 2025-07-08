@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -42,6 +42,7 @@ body {
 }
 
 .square {
+  position: relative;  /* Add this */
   width: 100px;
   height: 100px;
   border: 1px solid #333;
@@ -49,8 +50,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
-  background-image: url("https://cdn.creazilla.com/cliparts/1999261/brown-crate-clipart-lg.png");
+  /* background-color: #eee;
+  background-image: url("https://cdn.creazilla.com/cliparts/1999261/brown-crate-clipart-lg.png"); */
   cursor: pointer;
 }
 
@@ -78,6 +79,18 @@ body {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.tile-index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;  /* adjust size as needed */
+  font-weight: bold;
+  pointer-events: none; /* so clicks go through */
+  user-select: none;    /* prevent text selection */
 }
 
 .choice-container {
